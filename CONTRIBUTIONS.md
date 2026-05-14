@@ -56,7 +56,7 @@ Almost all of my program is from the template. I did not give myself as much tim
 
 The most difficult part of my project was the EntityFramework regarding enemies. I went through many itterations when it came to what enemy to add just because
 they would refuse to migrate properly. I believe I have a better handle on migration and I believe I could add more monster types reasonably going forward. The
-biggest help was going into SQLManagamentServer and manually adding in my monster Luke the Meistor of Slime.
+biggest help was going into SQLManagamentServer and manually adding in my monster Luke the Meistor of Slime. I was making an attempt to shoot for the A-tier, but I don't know if I quite made it.
 
 > **Example:** *"The hardest part was figuring out why my Shop migration
 > kept breaking — I'd forgotten to add the discriminator value in
