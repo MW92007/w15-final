@@ -8,8 +8,7 @@
 
 ## 1. Starting Point
 
-[Tell me where you started: your own repo carried forward from W14, the W15
-template, or a hybrid?]
+My starting point was from a clone of the W15 template. I had fallen behind and it was more reasonable to start from somewhere.
 
 > **Example:** *"I started from my own W14 repo and pulled MapManager.cs and
 > ExplorationUI.cs from the W15 template. My existing GameContext, models,
@@ -22,8 +21,11 @@ template, or a hybrid?]
 
 ## 2. What I Added
 
-[List the things YOU added on top of your starting point. For each, one
-sentence on what it does.]
+AdminService.MostDangerousRoom() - LINQ that uses GroupBy on the rooms that monsters are present in and sums up their health. It then orders the table and then pulls the first (highest value) from the table and displays the room with the highest sum of HP currently no the map.
+
+AdminService.InventoryAudit() - LINQ that uses GroupBy to pair all items in the player inventory into their ContainerType. Chest, Inventory, MonsterLoot. The method then prints each table with their respective items.
+
+Slime.cs - New Slime type enemy. The Slime has a unique attribute called GelatinousBile which acts as a 'burst attack' with each attack dealing more damage than the last. The power and amount of attacks is equal to the value of GelatinousBile. A Slime called 'Luke the Meistor of Slime' is added into the 'SeedFinalWorld.sql' and thus loaded on game start. He is positioned in the Hidden Shrine and currently has the highest HP and damage potential.
 
 > **Example:**
 > - `AdminService.MostDangerousRoom()` — LINQ `GroupBy` on `Monster.CurrentRoomId`
@@ -37,8 +39,7 @@ sentence on what it does.]
 
 ## 3. What I Used From the Template / AI / Other Sources
 
-[Honest list. Using template code or AI assistance with attribution is fine.
-Pretending you wrote something you didn't is not.]
+Almost all of my program is from the template. I did not give myself as much time as I should have. While  I programmed most of my additions, AI was used to bug fix and was used heavily in the construction of the InventoryAudit() method.
 
 > **Example:**
 > - `MapManager.cs`, `ExplorationUI.cs`: used as-is from the W15 template.
@@ -53,9 +54,9 @@ Pretending you wrote something you didn't is not.]
 
 ## 4. Reflection on This Project (one paragraph)
 
-[Hardest part of building YOUR W15 project specifically? What would you
-build NEXT on top of it if you had another week? Save the broader
-semester reflection for Section 5.]
+The most difficult part of my project was the EntityFramework regarding enemies. I went through many itterations when it came to what enemy to add just because
+they would refuse to migrate properly. I believe I have a better handle on migration and I believe I could add more monster types reasonably going forward. The
+biggest help was going into SQLManagamentServer and manually adding in my monster Luke the Meistor of Slime.
 
 > **Example:** *"The hardest part was figuring out why my Shop migration
 > kept breaking — I'd forgotten to add the discriminator value in
@@ -74,11 +75,10 @@ rather hear "week X was painful because Y" than diplomatic non-answers.
 Concrete > polite.
 
 **What did you learn that genuinely stuck with you?**
-[One specific concept or skill — be concrete. "TPH" is fine; "`OfType<T>()`
-finally clicked when I had to filter loot drops" is better.]
+Migrations and data tables were very interesting to work with and I'd like to look further into it.
 
 **What did you like about the course?**
-[Pacing, projects, format, in-class examples, READMEs, anything.]
+I like the class in general to be honest, I felt like it was paced well.
 
 **What didn't work for you?**
 [What was confusing, slow, repetitive, or disconnected from the rest of
